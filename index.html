@@ -16,6 +16,8 @@
         const rock = 0;
         const paper = 1;
         const scissors = 2;
+        const choices = ["Rock", "Paper", "Scissors"];
+
         
         function getHumanChoice () {
             let choice = prompt("Enter your choice").toLowerCase();
@@ -39,13 +41,16 @@
             } else if (choice === scissors) {
               choiceName = "Scissors";
             }
-            alert("Computer chose:" + choiceName);
+            alert("Computer chose: " + choiceName);
             return choice;
         }
 
         function playRound (human, computer) {
             human = getHumanChoice();
             computer = getComputerChoice();
+
+            let humanChoice = choices[human];
+            let computerChoice = choices[computer];
 
             console.log("Human chose:", human);
             console.log("Computer chose:", computer);
@@ -55,14 +60,14 @@
                 (computer === paper && human === scissors) ||
                 (computer === scissors && human === rock)
             ) {
-                alert("You won!");
+                alert("You won! " + humanChoice + " beats " + computerChoice);
                 return "win"
             } else if (
                 (computer === rock && human === scissors) ||
                 (computer === paper && human === rock) ||
                 (computer === scissors && human === paper)
             ) {
-                alert("You lost!");
+                alert("You lost! " + computerChoice + " beats " + humanChoice);
                 return "lose"
             } else {
                 alert("Draw!");
