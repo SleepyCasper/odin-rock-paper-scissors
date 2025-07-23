@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <link rel="stylesheet" href="style.css">
     <script src="scr.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <div class="title"><h1>Rock Paper Scissors</h1></div>
+    <div class="text">Choose your weapon!</div>
+
+    <div class="choices">
+        <button class="button" id="rock">Rock</button>
+        <button class="button" id="paper">Paper</button>
+        <button class="button" id="scissors">Scissors</button>
+    </div>
     
+    <div class="score">
+        <div class="score-flex">
+            <div class="score-player">Player score</div>
+            <div class="scoreboard scoreboard-player"></div>
+        </div>
+        <div class="score-flex">
+            <div class="score-comp">Computer score</div>
+            <div class="scoreboard scoreboard-comp"></div>
+        </div>
+    </div>
+
+    <div class="result">Result:</div>
+    <div class="result-board"></div>
 </body>
 </html>
