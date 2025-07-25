@@ -141,6 +141,7 @@ buttons.forEach((button) => {
         // console.log(playerChoiceNum);
         console.log(playerChoice);
         playRound();
+        finalResult();
     })
 })
 
@@ -174,9 +175,39 @@ function playRound (player, computer) {
               computerScore++;
               resultBoard.innerHTML = `You lost!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
               scoreboardComp.textContent = computerScore;
-      } else {
+            } else {
               resultBoard.innerHTML = `It's a draw!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
-            }
+              }
 }
+
+function finalResult () {
+  
+  if (playerScore === 5) {
+    resultBoard.textContent = "You won the game!";
+    reset();
+  } else if (computerScore === 5) {
+    resultBoard.textContent = "You lost the game!";
+    reset();
+  }
+  
+}
+
+function reset () {
+  const resetBtn = document.createElement("button");
+  resetBtn.classList.add("button-reset");
+  resetBtn.textContent = "Play again";
+  document.body.appendChild(resetBtn);
+
+  resetBtn.addEventListener ('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+    resultBoard.textContent = "";
+    scoreboardComp.textContent = "";
+    scoreboardPlayer.textContent = "";
+    resetBtn.remove();
+  })
+}
+
+
 
 
