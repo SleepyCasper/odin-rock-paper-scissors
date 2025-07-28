@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scr.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="title"><h1>Rock Paper Scissors</h1></div>
-    <div class="text">Choose your weapon!</div>
-
-    <div class="choices">
-        <button class="button" id="rock">Rock</button>
-        <button class="button" id="paper">Paper</button>
-        <button class="button" id="scissors">Scissors</button>
-    </div>
-    
-    <div class="score">
-        <div class="score-flex">
-            <div class="score-player">Player score</div>
-            <div class="scoreboard scoreboard-player"></div>
+    <div class="container-main">
+        <div class="container-up">
+            <div class="title"><h1>Rock Paper Scissors</h1></div>
+            <div class="text">Choose your weapon!</div>
         </div>
-        <div class="score-flex">
-            <div class="score-comp">Computer score</div>
-            <div class="scoreboard scoreboard-comp"></div>
+
+        <div class="container-grid">
+            <div class="choices">
+                <button class="button" id="rock"><div class="text-btn">Rock</div></button>
+                <button class="button" id="paper"><div class="text-btn">Paper</div></button>
+                <button class="button" id="scissors"><div class="text-btn">Scissors</div></button>
+            </div>
+            
+            <div class="score">
+                <div class="score-flex">
+                    <div class="score-player">Player score</div>
+                    <div class="scoreboard scoreboard-player"></div>
+                </div>
+                <div class="score-flex">
+                    <div class="score-comp">Computer score</div>
+                    <div class="scoreboard scoreboard-comp"></div>
+                </div>
+            </div>
+            
+            
+            <div class="result-board"></div>
+            
         </div>
     </div>
-
-    <div class="result">Result:</div>
-    <div class="result-board"></div>
 </body>
 </html>

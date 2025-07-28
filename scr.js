@@ -115,17 +115,20 @@
 // const paper = document.querySelector('#paper');
 // const scissors = document.querySelector('#scissors');
 
-const scoreboardPlayer = document.querySelector('.scoreboard-player');
-const scoreboardComp = document.querySelector('.scoreboard-comp');
-const resultBoard = document.querySelector('.result-board');
-
-const buttons = document.querySelectorAll('button');
-
 // const choice = {
 //   rock: 0,
 //   paper: 1,
 //   scissors: 2,
 // };
+
+const scoreboardPlayer = document.querySelector('.scoreboard-player');
+const scoreboardComp = document.querySelector('.scoreboard-comp');
+const resultBoard = document.querySelector('.result-board');
+const containerResult = document.querySelector('.container-result');
+
+const buttons = document.querySelectorAll('button');
+
+
 
 let playerChoice = 0;
 let playerChoiceNum = 0;
@@ -196,7 +199,7 @@ function reset () {
   const resetBtn = document.createElement("button");
   resetBtn.classList.add("button-reset");
   resetBtn.textContent = "Play again";
-  document.body.appendChild(resetBtn);
+  resultBoard.appendChild(resetBtn);
 
   resetBtn.addEventListener ('click', () => {
     playerScore = 0;
